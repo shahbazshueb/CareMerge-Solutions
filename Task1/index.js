@@ -41,23 +41,23 @@ app.get('/I/want/title', (req, res) => {
 
 	var getDataFromSite = function (site){
 		request(addhttp(site),{timeout: 1500},  function (error, response, body){
-				if (!error && response.statusCode == 200) 
-  				{	
-    				var data = cheerio.load(body);
-    				var title = data("title").text();
-					dataString += "<li>" + site + " - " + title + "</li>"; 
-	  			}
-				else{
-					dataString += '<li>' + error.hostname + ' - ' + 'NO RESPONSE' + '</li>';
-				}
-				check++;
-				//If the titles of all the url have been received render the page
-				if(check == final){
-					res.render('home', {
-    					data: dataString
-  					});
-				}			
-			});
+			if (!error && response.statusCode == 200) 
+  			{	
+    			var data = cheerio.load(body);
+    			var title = data("title").text();
+				dataString += "<li>" + site + " - " + title + "</li>"; 
+	  		}
+			else{
+				dataString += '<li>' + error.hostname + ' - ' + 'NO RESPONSE' + '</li>';
+			}
+			check++;
+			//If the titles of all the url have been received render the page
+			if(check == final){
+				res.render('home', {
+    				data: dataString
+  				});
+			}			
+		});
 	}
 	if(typeof queryObject.address == 'string')
 	{
