@@ -1,0 +1,25 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "CareMerge-Solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "/I/want/title/?address=google.com&address=www.dawn.com/events/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahbazshueb/CareMerge-Solutions.git"
+  },
+  "author": "Shahbaz Shueb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahbazshueb/CareMerge-Solutions/issues"
+  },
+  "homepage": "https://github.com/shahbazshueb/CareMerge-Solutions#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "request": "^2.72.0"
+  }
+}
